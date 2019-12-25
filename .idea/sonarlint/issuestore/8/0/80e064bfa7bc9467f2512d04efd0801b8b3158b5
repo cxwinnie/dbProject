@@ -1,0 +1,11 @@
+
+fsquid:S4488"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(÷€€–8öœ×ïò-
+wsquid:S22931"YReplace the type specification in this constructor call with the diamond operator ("<>").(ç’Ö‚8àÆ•ó-
+wsquid:S2293/"YReplace the type specification in this constructor call with the diamond operator ("<>").(‘œ¡È8öœ×ïò-
+]squid:S1155…">Use isEmpty() to check whether the collection is empty or not.(¹»­İ8–à¦¹ó-
+vsquid:S2293."YReplace the type specification in this constructor call with the diamond operator ("<>").(­™S8öœ×ïò-
+|squid:S22930"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÑşÛüùÿÿÿÿ8öœ×ïò-
+\squid:S1155;">Use isEmpty() to check whether the collection is empty or not.(ˆîñø8öœ×ïò-
+lsquid:S1192R"IDefine a constant instead of duplicating this literal "fatherId" 3 times.(Æ…áşÿÿÿÿ8 „á•ó-
+ksquid:S4488+"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(ÂŸÃîùÿÿÿÿ8öœ×ïò-
+psquid:S3776,"RRefactor this method to reduce its Cognitive Complexity from 23 to the 15 allowed.(ŠŞÃ¶8¥Âñ”ó-

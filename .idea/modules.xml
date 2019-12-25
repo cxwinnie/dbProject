@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/dbParent/dbParent.iml" filepath="$PROJECT_DIR$/dbParent/dbParent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/dbProject.iml" filepath="$PROJECT_DIR$/.idea/dbProject.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dbProjectDao/dbProjectDao.iml" filepath="$PROJECT_DIR$/dbProjectDao/dbProjectDao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dbProjectEntity/dbProjectEntity.iml" filepath="$PROJECT_DIR$/dbProjectEntity/dbProjectEntity.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dbProjectService/dbProjectService.iml" filepath="$PROJECT_DIR$/dbProjectService/dbProjectService.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dbProjectWeb/dbProjectWeb.iml" filepath="$PROJECT_DIR$/dbProjectWeb/dbProjectWeb.iml" />
+    </modules>
+  </component>
+</project>

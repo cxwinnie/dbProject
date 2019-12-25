@@ -1,0 +1,21 @@
+server:
+  port: 8080
+logging:
+  level:
+    org:
+      springframework: error
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:oracle:thin:@127.0.0.1:1521/orcl
+    driver-class-name: oracle.jdbc.OracleDriver
+    username: XuXianda
+    password: 123456
+  redis:
+      cluster:
+        nodes: 192.168.0.13:6379,192.168.0.13:6380,192.168.0.13:6381,192.168.0.13:6382,192.168.0.13:6383,192.168.0.13:6384
+
+mybatis:
+  mapper-locations: classpath:com/xuxianda/dao/impl/*.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

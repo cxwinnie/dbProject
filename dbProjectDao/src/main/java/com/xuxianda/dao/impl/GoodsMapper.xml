@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.xuxianda.dao.GoodsMapper" >
+  <resultMap id="BaseResultMap" type="com.xuxianda.entity.Goods" >
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="DESCRIPTION" property="description" jdbcType="VARCHAR" />
+    <result column="PRICE" property="price" jdbcType="DECIMAL" />
+    <result column="GOODS_TYPE_ID" property="goodsTypeId" jdbcType="DECIMAL" />
+  </resultMap>
+
+  <select id="getGoodsInfo" parameterType="java.lang.String" resultType="java.util.Map">
+    select g.id as "id",
+    g.name as "name",
+    g.description as "description",
+    g.price as "price",
+    g.goods_type_id as "goodsTypeId",
+    gt.type as "typeName"
+    from goods g
+    left join goods_type gt on g.goods_type_id = gt.id
+    where g.id = #{goodsId}
+  </select>
+
+  <select id="getGoodsInfoByType" parameterType="java.lang.String" resultType="java.util.Map">
+    select g.id as "id",
+    g.name as "name",
+    g.description as "description",
+    g.price as "price",
+    g.goods_type_id as "goodsTypeId",
+    gt.type as "typeName"
+    from goods g
+    left join goods_type gt on g.goods_type_id = gt.id
+    where 1=1
+    <if test="typeId != null and typeId != '' ">
+      and g.goods_type_id = #{typeId}
+    </if>
+    <if test="minPrice != null and minPrice != '' ">
+      and g.price &gt;= #{minPrice}
+    </if>
+    <if test="maxPrice != null and maxPrice != '' ">
+      and g.price &lt;= #{maxPrice}
+    </if>
+  </select>
+
+</mapper>

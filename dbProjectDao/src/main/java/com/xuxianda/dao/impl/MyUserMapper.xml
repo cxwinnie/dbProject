@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.xuxianda.dao.MyUserMapper">
+    <resultMap id="BaseResultMap" type="com.xuxianda.entity.MyUser">
+        <result column="ID" property="id" jdbcType="VARCHAR"/>
+        <result column="NAME" property="name" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <select id="selectAll" resultType="com.xuxianda.entity.MyUser">
+      select t.id,t.name from MY_USER t
+    </select>
+
+</mapper>

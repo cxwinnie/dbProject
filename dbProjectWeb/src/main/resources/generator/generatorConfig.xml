@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+
+    <classPathEntry location="D:\important\jar\oracle\ojdbc6.jar"/>
+    <!-- 指定运行环境是mybatis3的版本 -->
+    <context id="testTables" targetRuntime="MyBatis3">
+
+        <commentGenerator>
+            <!-- 是否取消注释 -->
+            <property name="suppressAllComments" value="true" />
+            <!-- 是否生成注释代时间戳 -->
+            <property name="suppressDate" value="true" />
+        </commentGenerator>
+        <!-- jdbc 连接信息 -->
+        <jdbcConnection driverClass="oracle.jdbc.OracleDriver"
+                        connectionURL="jdbc:oracle:thin:@127.0.0.1:1521/orcl" userId="XuXianda" password="123456">
+        </jdbcConnection>
+
+        <!-- targetPackage指定模型在生成在哪个包 ,targetProject指定项目的src,-->
+        <javaModelGenerator targetPackage="com.xuxianda.entity"
+                            targetProject="../dbProjectEntity/src/main/java">
+            <!-- 去除字段前后空格 -->
+            <property name="trimStrings" value="false" />
+        </javaModelGenerator>
+        <!-- 配置SQL映射文件生成信息 -->
+        <sqlMapGenerator targetPackage="com.xuxianda.service.impl"
+                         targetProject="../dbProjectDao/src/main/java" />
+        <!--配置dao接口生成信息-->
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.xuxianda.dao" targetProject="../dbProjectDao/src/main/java" />
+
+        <table tableName="goods" domainObjectName="Goods"/>
+        <table tableName="goods_type" domainObjectName="GoodsType"/>
+
+    </context>
+</generatorConfiguration>
